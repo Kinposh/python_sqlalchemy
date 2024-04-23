@@ -1,7 +1,7 @@
-from db_init import engine, person_table
+from db_init import engine, employee_basic_info_table
 
 with engine.connect() as conn:
-    query = person_table.select()
+    query = employee_basic_info_table.select()
     result_set = conn.execute(query)
 
     # for row in result_set:

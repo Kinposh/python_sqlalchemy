@@ -1,6 +1,7 @@
 import sqlalchemy
 
-engine = sqlalchemy.create_engine('mysql://root:test@localhost/testdb', echo=True)
+engine = sqlalchemy.create_engine('mysql+mysqlconnector://root:kinposh@8.136.221.2/study', echo=True)
+
 
 meta_data = sqlalchemy.MetaData()
 
@@ -12,4 +13,4 @@ person_table = sqlalchemy.Table(
     sqlalchemy.Column("address", sqlalchemy.String(255), nullable=True),
 )
 
-meta_data.create_all(engine)
+
